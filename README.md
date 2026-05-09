@@ -1,2 +1,2 @@
-# Intelig-ncia-Artificiais-Generativas---Senai-Sorocaba
+# Inteligência Artificiais Generativas
 Repositório dedicado aos estudos, projetos, anotações e práticas desenvolvidas no curso de Inteligência Artificiais Generativas do SENAI Sorocaba 
