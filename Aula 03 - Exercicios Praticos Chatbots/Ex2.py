@@ -1,0 +1,35 @@
+from openai import OpenAI
+
+cliente = OpenAI(
+    api_key="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",
+    base_url="https://integrate.api.nvidia.com/v1"
+)
+
+comportamento =input("Digite como você quer que a IA se comporte:\n")
+pergunta = input("Digite a sua pergunta para a IA:\n")
+
+resposta = cliente.chat.completions.create(
+    model="meta/llama-3.1-8b-instruct",
+
+    messages=[
+        {
+            "role": "system",
+            "content": comportamento
+        },
+
+        {
+            "role": "user",
+            "content": pergunta
+        }
+    ]
+)
+print("\nResposta da IA:\n")
+print("Ela agira como:"+ comportamento)
+print(resposta.choices[0].message.content)
+
+# Resposta:
+# Neste codigo eu deixei de maneira mais flexivel para que o usuario possa escolher o comportamento da IA,
+# eu achei um resultado bom, ele consgui me responder de maneira clara a minha duvida, acho que a unica coisa
+# e que ele não aje da maneira parecida ao gpt, mas acredito que para isso seja apenas uma configuração mais clara.
+
+
